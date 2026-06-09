@@ -73,21 +73,21 @@
         v6: v6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp EXCL &kp X &kp N9 &kp LS(R) &kp N6 &kp LS(Q) &kp N6 &kp H &kp G &kp RPAR &kp N9 &kp LS(M)>;
+            bindings = <&kp EXCL &kp X &kp N9 &kp LS(R) &kp N6 &kp LS(Q) &kp N6 &kp H &kp G &kp RPAR &kp N9 &kp LS(M)>;
             label = "V6";
         };
 
         Macro2: Macro2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp B &kp P &kp N0 &kp N9 &kp F &kp F &kp B &kp I &kp R>;
+            bindings = <&kp B &kp P &kp N0 &kp N9 &kp F &kp F &kp B &kp I &kp R>;
             label = "MACRO2";
         };
 
         Macro1: Macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(U) &kp N5 &kp LS(F) &kp LS(F) &kp N7 &kp LS(V) &kp COLON &kp F &kp LS(Z) &kp H &kp LS(A) &kp N8 &kp K &kp UNDER &kp LS(K)>;
+            bindings = <&kp LS(U) &kp N5 &kp LS(F) &kp LS(F) &kp N7 &kp LS(V) &kp COLON &kp F &kp LS(Z) &kp H &kp LS(A) &kp N8 &kp K &kp UNDER &kp LS(K)>;
             label = "MACRO1";
         };
     };

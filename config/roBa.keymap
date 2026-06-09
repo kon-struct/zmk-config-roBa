@@ -69,6 +69,27 @@
             bindings = <&kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp UNDER &kp K &kp O &kp N &kp D &kp O &kp UNDER &kp A &kp H &kp AT &kp M &kp A &kp I &kp L &kp DOT &kp T &kp O &kp Y &kp O &kp T &kp A &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
             label = "NEW_MACRO";
         };
+
+        v6: v6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp EXCL &kp X &kp N9 &kp LS(R) &kp N6 &kp LS(Q) &kp N6 &kp H &kp G &kp RPAR &kp N9 &kp LS(M)>;
+            label = "V6";
+        };
+
+        Macro2: Macro2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp B &kp P &kp N0 &kp N9 &kp F &kp F &kp B &kp I &kp R>;
+            label = "MACRO2";
+        };
+
+        Macro1: Macro1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(U) &kp N5 &kp LS(F) &kp LS(F) &kp N7 &kp LS(V) &kp COLON &kp F &kp LS(Z) &kp H &kp LS(A) &kp N8 &kp K &kp UNDER &kp LS(K)>;
+            label = "MACRO1";
+        };
     };
 
     behaviors {
@@ -98,19 +119,19 @@
 
         FUNCTION {
             bindings = <
-&kp LS(EXCLAMATION)  &trans  &trans  &trans  &trans                       &kp F1       &kp F2              &kp F3    &kp F4    &kp F5
-&trans               &trans  &trans  &trans  &trans  &trans      &kp F13  &kp MINUS    &mkp MB1            &mkp MB2  &mkp MB3  &kp F10
-&trans               &trans  &trans  &trans  &trans  &trans      &trans   &kp AT_SIGN  &kp LS(UNDERSCORE)  &mkp MB4  &mkp MB5  &kp F11
-&trans               &trans  &trans  &trans  &trans  &trans      &trans   &trans                                               &kp F12
+&kp EXCLAMATION  &trans     &kp HASH      &kp DOLLAR            &kp PERCENT                                     &Macro1      &Macro2             &v6       &email    &kp F5
+&kp AMPERSAND    &trans     &kp CARET     &kp LEFT_PARENTHESIS  &kp LS(RIGHT_PARENTHESIS)  &trans      &kp F13  &kp MINUS    &mkp MB1            &mkp MB2  &mkp MB3  &kp F10
+&kp SEMICOLON    &kp COLON  &kp QUESTION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET          &trans      &trans   &kp AT_SIGN  &kp LS(UNDERSCORE)  &mkp MB4  &mkp MB5  &kp F11
+&trans           &trans     &trans        &trans                &trans                     &trans      &trans   &trans                                               &kp F12
             >;
         };
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &kp PLUS                                                            &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &kp CARET     &kp EQUAL
+&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL                    &trans          &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp PLUS      &kp MINUS
+&trans                      &trans           &trans           &trans                &trans                 &trans                       &kp DOT         &kp KP_NUMBER_0                                            &kp PIPE
             >;
         };
 

@@ -62,6 +62,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        email: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp UNDER &kp K &kp O &kp N &kp D &kp O &kp UNDER &kp A &kp H &kp AT &kp M &kp A &kp I &kp L &kp DOT &kp T &kp O &kp Y &kp O &kp T &kp A &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
+            label = "NEW_MACRO";
+        };
     };
 
     behaviors {

@@ -66,14 +66,14 @@
         email: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp UNDER &kp K &kp O &kp N &kp D &kp O &kp UNDER &kp A &kp H &kp AT &kp M &kp A &kp I &kp L &kp DOT &kp T &kp O &kp Y &kp O &kp T &kp A &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
+            bindings = <&kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp LS(INT_RO) &kp K &kp O &kp N &kp D &kp O &kp LS(INT_RO) &kp A &kp H &kp LBKT &kp M &kp A &kp I &kp L &kp DOT &kp T &kp O &kp Y &kp O &kp T &kp A &kp DOT &kp C &kp O>;
             label = "NEW_MACRO";
         };
 
         v6: v6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EXCL &kp X &kp N9 &kp LS(R) &kp N6 &kp LS(Q) &kp N6 &kp H &kp G &kp RPAR &kp N9 &kp LS(M)>;
+            bindings = <&kp LS(N1) &kp X &kp N9 &kp LS(R) &kp N6 &kp LS(Q) &kp N6 &kp H &kp G &kp LS(N9) &kp N9 &kp LS(M)>;
             label = "V6";
         };
 
@@ -87,7 +87,7 @@
         Macro1: Macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(U) &kp N5 &kp LS(F) &kp LS(F) &kp N7 &kp LS(V) &kp COLON &kp F &kp LS(Z) &kp H &kp LS(A) &kp N8 &kp K &kp UNDER &kp LS(K)>;
+            bindings = <&kp LS(U) &kp N5 &kp LS(F) &kp LS(F) &kp N7 &kp LS(V) &kp SINGLE_QUOTE &kp F &kp LS(Z) &kp H &kp LS(A) &kp N8 &kp K &kp LS(INT_RO) &kp LS(K)>;
             label = "MACRO1";
         };
     };
@@ -119,16 +119,16 @@
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR        &kp PERCENT                             &Macro1    &Macro2    &v6       &email    &kp F5
-&kp AMPERSAND    &kp APOS           &kp CARET     &kp LPAR          &kp RPAR           &trans      &kp F13  &kp MINUS  &mkp MB1   &mkp MB2  &mkp MB3  &kp F10
-&kp SEMICOLON    &kp COLON          &kp QUESTION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &trans   &kp AT     &kp UNDER  &mkp MB4  &mkp MB5  &kp F11
-&trans           &kp INT_YEN        &kp SLASH     &trans            &trans             &trans      &trans   &trans                                    &kp F12
+&kp EXCLAMATION  &kp LS(N2)        &kp HASH      &kp DOLLAR  &kp PERCENT                             &Macro1    &Macro2         &v6       &email    &none
+&kp LS(N6)       &kp LS(N7)        &kp EQUAL     &kp LS(N8)  &kp LS(N9)   &trans      &kp LS(EQUAL)  &kp MINUS  &mkp MB1        &mkp MB2  &mkp MB3  &none
+&kp SEMICOLON    &kp SINGLE_QUOTE  &kp QUESTION  &kp RBKT    &kp BSLH     &trans      &trans         &kp LBKT   &kp LS(INT_RO)  &mkp MB4  &mkp MB5  &none
+&kp PLUS         &kp INT_YEN       &kp SLASH     &trans      &trans       &trans      &trans         &trans                                         &none
             >;
         };
 
         NUM {
             bindings = <
-&none   &kp F7  &kp F8  &kp F9  &kp PLUS                                          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp CARET     &kp EQUAL
+&none   &kp F7  &kp F8  &kp F9  &kp PLUS                                          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL     &kp LS(MINUS)
 &none   &kp F4  &kp F5  &kp F6  &kp RIGHT_PARENTHESIS  &none       &kp BACKSLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
 &none   &kp F1  &kp F2  &kp F3  &kp GREATER_THAN       &none       &kp INT_YEN    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS      &kp MINUS
 &trans  &trans  &trans  &trans  &trans                 &trans      &kp DOT        &kp N0                                                  &kp PIPE

@@ -119,10 +119,10 @@
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR            &kp PERCENT                                 &Macro1      &Macro2             &v6       &email    &kp F5
-&kp AMPERSAND    &kp SINGLE_QUOTE   &kp EQUAL     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans      &kp F13  &kp MINUS    &mkp MB1            &mkp MB2  &mkp MB3  &kp F10
-&kp SEMICOLON    &kp COLON          &kp QUESTION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans      &trans   &kp AT_SIGN  &kp LS(UNDERSCORE)  &mkp MB4  &mkp MB5  &kp F11
-&trans           &trans             &trans        &trans                &trans                 &trans      &trans   &trans                                               &kp F12
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH       &kp DOLLAR        &kp PERCENT                             &Macro1    &Macro2    &v6       &email    &kp F5
+&kp AMPERSAND    &kp APOS           &kp LS(MINUS)  &kp LPAR          &kp RPAR           &trans      &kp F13  &kp MINUS  &mkp MB1   &mkp MB2  &mkp MB3  &kp F10
+&kp SEMICOLON    &kp COLON          &kp LS(SLASH)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &trans   &kp AT     &kp UNDER  &mkp MB4  &mkp MB5  &kp F11
+&trans           &trans             &trans         &trans            &trans             &trans      &trans   &trans                                    &kp F12
             >;
         };
 

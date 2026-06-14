@@ -10,6 +10,7 @@
 
 &trackball {
     //automouse-layer = <4>;
+
     scroll-layers = <5>;
 
     // arrows {
@@ -52,6 +53,16 @@
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
+        };
+
+        testkp {
+            bindings = <&kp J>;
+            key-positions = <19 20>;
+        };
+
+        testalt {
+            bindings = <&kp A>;
+            key-positions = <21 19>;
         };
     };
 

@@ -27,53 +27,9 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-
-        testkp {
-            bindings = <&kp J>;
-            key-positions = <19 20>;
-        };
-
-        testalt {
-            bindings = <&kp A>;
-            key-positions = <21 19>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
         email: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -140,8 +96,8 @@
         NUM {
             bindings = <
 &none   &none   &none   &none       &none                                        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL             &kp LS(MINUS)
-&none   &none   &none   &kp LS(N8)  &kp LS(N9)        &none       &kp BACKSLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SINGLE_QUOTE)  &kp SLASH
-&none   &none   &none   &kp LT      &kp GREATER_THAN  &none       &kp INT_YEN    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COLON             &kp MINUS
+&none   &none   &none   &kp LS(N8)  &kp LS(N9)        &none       &kp BACKSLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SINGLE_QUOTE)  &trans
+&none   &none   &none   &kp LT      &kp GREATER_THAN  &none       &kp INT_YEN    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COLON             &kp SLASH
 &trans  &trans  &trans  &trans      &trans            &trans      &kp DOT        &kp N0                                                          &kp LS(INT_YEN)
             >;
         };
